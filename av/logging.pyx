@@ -322,4 +322,5 @@ cdef int async_log_callback(void *arg) except -1:
 
 
 # Start the magic!
-lib.av_log_set_callback(log_callback)
+#lib.av_log_set_callback(log_callback)
+lib.av_log_set_level(50)
