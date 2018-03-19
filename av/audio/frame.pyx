@@ -34,6 +34,7 @@ cdef class AudioFrame(Frame):
         self.ptr.nb_samples = nb_samples
         self.ptr.format = <int>format
         self.ptr.channel_layout = layout
+        self.ptr.channels = lib.av_get_channel_layout_nb_channels(self.ptr.channel_layout)
 
         # HACK: It really sucks to do this twice.
         self._init_user_attributes()

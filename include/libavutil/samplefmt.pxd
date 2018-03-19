@@ -1,7 +1,7 @@
 cdef extern from "libavutil/samplefmt.h" nogil:
 
     cdef enum AVSampleFormat:
-        AV_SAMPLE_FMT_NONE
+        AV_SAMPLE_FMT_NONE = -1
         AV_SAMPLE_FMT_U8
         AV_SAMPLE_FMT_S16
         AV_SAMPLE_FMT_S32
